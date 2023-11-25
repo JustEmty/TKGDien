@@ -52,7 +52,7 @@
 }
 
 .cart-icon:hover{
-    background-color: var(--secondary-color);
+    background-color: var(--white-75percent);
     border: 1px solid var(--primary-color);
     border-radius: .5em;
     cursor: pointer;
@@ -123,4 +123,16 @@
 
 .footer-container a:hover{
     color: var(--white);
+}
+
+.subcribe-button{
+    background-color: var(--secondary-color);
+    width: 8em;
+    color: var(--black);
+}
+
+.subcribe-button:hover{
+    color: var(--black);
+    background-color: var(--third-color);
+    transition: all .3s ease-in-out;
 }
