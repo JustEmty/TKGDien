@@ -8,6 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/cart.css">
+    
 </head>
 <body>
   <header class="p-3 text-white nav-header">
@@ -26,7 +27,7 @@
           <input type="search" class="form-control form-control-dark" placeholder="Tìm kiếm..." aria-label="Search">
         </form>
         
-        <a href="cart.html"><img class="cart-icon" src="./asset/cart.svg" alt="cart-icon"></a>
+        <a href="empty-cart.html"><img class="cart-icon" src="./asset/cart.svg" alt="cart-icon"></a>
 
         <div class="text-end button-header-container">
           <button type="button" class="btn btn-outline-light me-2">Đăng Nhập</button>
@@ -34,70 +35,155 @@
       </div>
     </div>
   </header>
+  
+    <div>
+      <h2 style="color: black; text-align: center; margin: 2em 0 1em;"> CÓ 1 SẢN PHẨM TRONG GIỎ HÀNG </h2>
+    </div>
+    <main role="main">
+        <div class="container mt-4">
+            <div id="thongbao" class="alert alert-danger d-none face" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
 
-  <div class="container cart-status-none">
-    <div class="row">
-      <div class="col d-flex justify-content-center align-items-center">
-        <div class="card" style="max-width: 700px;"> 
-          <img src="./asset/empty-cart.png" class="card-img-center" alt="clear">
-          <div class="card-body text-center"> 
-            <h5 class="card-title fs-5">Chưa có sản phẩm nào trong giỏ hàng</h5> 
-            <p class="card-text fs-6"> 
-              Cùng mua sắm hàng ngàn sản phẩm tại PHNTshop nhé!
-            </p>
-            <div class="button-container">
-              <a href="mobilepage-iphone.html" class="text-decoration-none"><button type="button" class="btn btn-primary btn-sm">Mua Ngay</button></a>
+            <div class="card">
+                <div class="container-fliud">
+                    <form name="frmsanphamchitiet" id="frmsanphamchitiet" method="post"
+                        action="/php/twig/frontend/giohang/themvaogiohang">
+                        <input type="hidden" name="sp_ma" id="sp_ma" value="5">
+                        <input type="hidden" name="sp_ten" id="sp_ten" value="iPhone 15 Pro Max 256GB Titan Tự nhiên MU793VN/A">
+                        <input type="hidden" name="sp_gia" id="sp_gia" value="10990000.00">
+                        <input type="hidden" name="hinhdaidien" id="hinhdaidien" value="iPhone 15 Pro Max 256GB Titan Tự nhiên MU793VN/A">
+
+                        <div class="wrapper row">
+                            <div class="preview col-md-6">
+                                <div class="preview-pic tab-content">
+                                    <div class="tab-pane" id="pic-1">
+                                        <img src="./asset/638327041739564335_iphone-15-pro-max-5.webp" >
+                                    </div>
+                                </div>
+                                <ul class="preview-thumbnail nav nav-tabs">
+                                    <li class="active">
+                                        <a data-target="#pic-1" data-toggle="tab" class="">
+                                            <img src="./asset/638327041739564335_iphone-15-pro-max-5.webp" width="500" height="300">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="details col-md-6">
+                                <h3 class="product-title">iPhone 15 Pro Max 256GB Titan Tự nhiên MU793VN/A</h3>
+                                <h4 class="price">Giá hiện tại: <span>50.000.000 VNĐ</span></h4>
+                                <h5 class="colors">MÀU SẮC<br><p style="color: black;">MÀU TITIAN</p></h5>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+
+    <div >
+      <h2 style="color: black;text-align: center;margin: 2em 0 1em;"> THÔNG TIN KHÁCH HÀNG   </h2>
+    </div>
+
+    <div class="container mt-3">
+      <form action="/action_page.php" class="row g-3">
+          <div class="col-md-4">
+              <div class="mb-3">
+                  <label for="email">Email:</label>
+                  <input type="email" class="form-control" id="email" placeholder="Nhập email" name="email">
+              </div>
+
+              <div class="mb-3">
+                <label for="Họ và tên">Họ và tên :</label>
+                <input type="Họ và tên" class="form-control" id="Họ và tên" placeholder="Nhập Họ và tên" name="Họ và tên">
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-      
-  <div class="container-fluid footer-container">
-    <footer class="py-5">
-      <div class="row">
-        <div class="col-6 col-md-2 mb-3 px-5">
-          <h5>Điện Thoại</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Samsung</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">iPhone</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Oppo</a></li>
-          </ul>
-        </div>
-  
-        <div class="col-6 col-md-2 mb-3">
-          <h5>Liên hệ</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">phat.2174802010000@vanlanguni.vn</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">huy.2174802010000@vanlanguni.vn</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">nam.2174802010000@vanlanguni.vn</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">thong.2174802010000@vanlanguni.vn</a></li>
-          </ul>
-        </div>
-  
-        <div class="col-md-5 offset-md-1 mb-3">
-          <form>
-            <h5>Theo dõi</h5>
-            <p>Đón chờ những điều thú vị theo tháng từ PHNT.</p>
-            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-              <label for="newsletter1" class="visually-hidden">Địa chỉ Email</label>
-              <input id="newsletter1" type="text" class="form-control" placeholder="Địa chỉ email">
-              <button class="btn btn-primary subcribe-button" type="button">Theo dõi</button>
+          <div class="col-md-4">
+              <div class="mb-3">
+                  <label for="pwd">Mật khẩu:</label>
+                  <input type="password" class="form-control" id="pwd" placeholder="Nhập mật khẩu" name="pswd">
+              </div>
+
+              <div class="mb-3">
+                <label for="Địa chỉ">Địa chỉ :</label>
+                <input type="Địa chỉ" class="form-control" id="Địa chỉ" placeholder="Nhập Địa chỉ" name="Địa chỉ">
             </div>
-          </form>
-        </div>
-      </div>
-  
-      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-        <p>© 2023 Phát, Huy, Nam, Thông Team. All rights reserved.</p>
-        <ul class="list-unstyled d-flex">
-          <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
-          <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-          <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
-        </ul>
-      </div>
-    </footer>
+          </div>
+          <div class="col-md-4">
+              <div class="mb-3">
+                  <label for="sđt">Số điện thoại:</label>
+                  <input type="Số điện thoại " class="form-control" id="sđt" placeholder="Nhập số điện thoại" name="sđt">
+              </div>
+
+              <div class="mb-3">
+                <label for="Giới tính">Giới tính :</label>
+                <input type="Giới tính" class="form-control" id="Giới tính" placeholder="Nhập Giới tính" name="Giới tính">
+            </div>
+          </div>
+      </form>
   </div>
+  
+  
+
+  <div style="text-align: center;">
+    <h4 style="color: black;margin-top: 70px;">TỔNG TIỀN : 50.000.000 VNĐ</h4>
+    <button type="button" class="btn" style="font-size: 40px;background-color: black;
+    color: aliceblue;">ĐẶT HÀNG NGAY</button>
+  </div>
+
+
+
+
+
+    <div class="container-fluid footer-container">
+        <footer class="py-5">
+          <div class="row">
+            <div class="col-6 col-md-2 mb-3 px-5">
+              <h5>Mobile</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Samsung</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">iPhone</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Oppo</a></li>
+              </ul>
+            </div>
+      
+            <div class="col-6 col-md-2 mb-3">
+              <h5>Contact Us</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">phat.2174802010000@vanlanguni.vn</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">huy.2174802010000@vanlanguni.vn</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">nam.2174802010000@vanlanguni.vn</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">thong.2174802010000@vanlanguni.vn</a></li>
+              </ul>
+            </div>
+      
+            <div class="col-md-5 offset-md-1 mb-3">
+              <form>
+                <h5>Subscribe to our newsletter</h5>
+                <p>Monthly digest of what's new and exciting from us.</p>
+                <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                  <label for="newsletter1" class="visually-hidden">Email address</label>
+                  <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                  <button class="btn btn-primary" type="button">Subscribe</button>
+                </div>
+              </form>
+            </div>
+          </div>
+      
+          <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+            <p>© 2023 Company, Inc. All rights reserved.</p>
+            <ul class="list-unstyled d-flex">
+              <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+              <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+              <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+            </ul>
+          </div>
+        </footer>
+    </div>
 </body>
 </html>
+

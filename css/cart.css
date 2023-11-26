@@ -1,52 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Open+Sans:wght@300&family=Prata&family=Press+Start+2P&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Open+Sans:wght@300&family=Prata&family=Press+Start+2P&family=Quicksand:wght@300&display=swap');
-
-:root{
-    --primary-color: #001A78;
-    --secondary-color: #99AFFF;
-    --third-color: #CCD7FF;
-    --fourth-color: #0E1A45;
-
-    --black: #1A1D27;
-    --black-10percent: rgba(26, 29, 39, .1);
-    --white: #F2F5FF;
-    --white-75percent: rgba(242, 245, 255, .75);
-
-    --font-header-style: 'Quicksand', Arial, Helvetica, sans-serif;
-    --font-paragraph-style: 'Open Sans', Arial, Helvetica, sans-serif;
-}
-
-.cart-status-none{
-    margin-top: 4em;
-}
-
-.cart-status-none p{
-    color: var(--black);
-}
-
-.button-container{
-    display: flex;
-    justify-content: center;
-}
-
-.cart-status-none button{
-    background-image: linear-gradient(to right, var(--primary-color) 0%, var(--secondary-color)  51%, var(--primary-color)  100%);
-    margin: 10px;
-    padding: 15px 45px;
+.p{
+    color: black;
     text-align: center;
-    text-transform: uppercase;
-    transition: 0.5s;
-    background-size: 200% auto;
-    color: var(--white);            
-    box-shadow: 0 0 20px #eee;
-    border-radius: 10px;
-    display: block;
-    font-family: var(--font-header-style);
-    font-weight: bolder;
 }
 
-.cart-status-none button:hover {
-    background-position: right center; /* change the direction of the change here */
-    color: var(--white);
-    text-decoration: none;
+.product-title{
+    margin-top: .5em;
 }
+
+.product-title.colors {
+    margin-top: 30px; 
+}
+
+.colors{
+    margin-top: 30px; 
+}
+
+.colors p {
+    margin-top: 20px; 
+    border: 1px solid black; 
+    border-radius: 10px; 
+    padding: 5px; 
+    border: 1px solid black; 
+    border-radius: 10px; 
+    padding: 5px; 
+    display: inline-block; 
+}
+
+.price {
+    float: right;
+    margin-top: 30px;
+    margin-right: 1em;
+}
+
+
