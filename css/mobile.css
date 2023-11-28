@@ -1,6 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Open+Sans:wght@300&family=Prata&family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Open+Sans:wght@300&family=Prata&family=Press+Start+2P&family=Quicksand:wght@300&display=swap');
 
+:root{
+    --primary-color: #001A78;
+    --secondary-color: #99AFFF;
+    --third-color: #CCD7FF;
+    --fourth-color: #0E1A45;
+
+    --black: #1A1D27;
+    --black-10percent: rgba(26, 29, 39, .1);
+    --white: #F2F5FF;
+    --white-75percent: rgba(242, 245, 255, .75);
+
+    --font-header-style: 'Quicksand', Arial, Helvetica, sans-serif;
+    --font-paragraph-style: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -104,10 +119,6 @@ body {
     color: #ddd;
 }
 
-
-
-
-
 .footer-container{
     margin-top: 12em;
     background-color: var(--fourth-color);
@@ -123,4 +134,10 @@ body {
 
 .footer-container a:hover{
     color: var(--white);
+}
+
+.sort-title{
+    margin: 10px 10px .5em 0; 
+    color: var(--black);
+    font-family: var(--font-header-style);
 }
